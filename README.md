@@ -5,15 +5,15 @@
 
 A robust Flutter application designed to demonstrate API integration, unit testing, and widget testing best practices. This project serves as a reference for implementing clean architecture and testing strategies in Flutter.
 
-## 🚀 Features
+## 🚀 Features (PT-BR)
 
-- **API Integration**: Seamless data fetching using the `http` package.
-- **Unit Testing**: Comprehensive unit tests for business logic.
-- **Widget Testing**: UI tests to ensure widget stability.
-- **Mocking**: Advanced mocking capabilities using `mockito`.
-- **Code Generation**: Automated code generation with `build_runner`.
+- **Integração de API**: Exemplos de testes com busca de dados usando o pacote `http`.
+- **Testes Unitários**: Testes unitários abrangentes para a lógica de negócios.
+- **Testes de Widget**: Testes de UI para garantir a estabilidade dos widgets.
+- **Mocking**: Capacidades avançadas de mocking usando `mockito`.
+- **Geração de Código**: Geração automática de código com `build_runner`.
 
-## 🛠 Prerequisites
+## 🛠 Prerequisites (Pré-requisitos)
 
 Before you begin, ensure you have met the following requirements:
 
@@ -35,17 +35,22 @@ Before you begin, ensure you have met the following requirements:
 2. **Extraia o arquivo**:
    ```bash
    # Extraia para um local adequado, por exemplo:
-   C:\tools\flutter
+   C:\%USERPROFILE%\flutter
    ```
 
 3. **Adicione ao PATH**:
    - Abra "Editar as variáveis de ambiente do sistema"
-   - Adicione `C:\src\flutter\bin` ao PATH
+   - Adicione `C:\%USERPROFILE%\flutter\bin` ao PATH
 
 4. **Verifique a instalação**:
    ```bash
    flutter doctor
    ```
+
+Dicas: 
+1. Coloque o SDK no %USERPROFILE% para evitar problemas de permissão.
+2. Reinicie o terminal ou IDE após modificar o PATH.
+3. Coloque o SDK em um local sem espaços no caminho.
 
 #### 🍎 macOS
 
