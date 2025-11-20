@@ -21,7 +21,150 @@ Before you begin, ensure you have met the following requirements:
 - **Dart SDK**: Included with Flutter.
 - **IDE**: VS Code or Android Studio recommended.
 
-## 📥 Installation
+## � Instalação do Flutter e FVM
+
+### Instalando o Flutter SDK
+
+#### 🪟 Windows
+
+1. **Baixe o Flutter SDK**:
+   - Acesse [https://docs.flutter.dev/get-started/install/windows](https://docs.flutter.dev/get-started/install/windows)
+   - Ou baixe manualmente:  [https://docs.flutter.dev/install/manual](https://docs.flutter.dev/install/manual)
+   - Baixe o arquivo ZIP do Flutter SDK
+
+2. **Extraia o arquivo**:
+   ```bash
+   # Extraia para um local adequado, por exemplo:
+   C:\tools\flutter
+   ```
+
+3. **Adicione ao PATH**:
+   - Abra "Editar as variáveis de ambiente do sistema"
+   - Adicione `C:\src\flutter\bin` ao PATH
+
+4. **Verifique a instalação**:
+   ```bash
+   flutter doctor
+   ```
+
+#### 🍎 macOS
+
+1. **Usando Homebrew** (recomendado):
+   ```bash
+   brew install --cask flutter
+   ```
+
+2. **Ou baixe manualmente**:
+   ```bash
+   # Baixe o SDK
+   cd ~/development
+   curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_stable.zip
+   
+   # Extraia o arquivo
+   unzip flutter_macos_arm64_stable.zip
+   
+   # Adicione ao PATH (adicione ao ~/.zshrc ou ~/.bash_profile)
+   export PATH="$PATH:`pwd`/flutter/bin"
+   source ~/.zshrc
+   ```
+
+3. **Verifique a instalação**:
+   ```bash
+   flutter doctor
+   ```
+
+#### 🐧 Linux
+
+1. **Baixe e instale**:
+   ```bash
+   # Instale as dependências
+   sudo apt-get update
+   sudo apt-get install curl git unzip xz-utils zip libglu1-mesa
+   
+   # Baixe o Flutter SDK
+   cd ~/development
+   wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_stable.tar.xz
+   
+   # Extraia o arquivo
+   tar xf flutter_linux_stable.tar.xz
+   
+   # Adicione ao PATH (adicione ao ~/.bashrc ou ~/.zshrc)
+   export PATH="$PATH:$HOME/development/flutter/bin"
+   source ~/.bashrc
+   ```
+
+2. **Verifique a instalação**:
+   ```bash
+   flutter doctor
+   ```
+
+### Instalando o FVM (Flutter Version Management)
+
+O FVM permite gerenciar múltiplas versões do Flutter em um mesmo sistema.
+
+#### Instalação via Dart Pub (Todas as plataformas)
+
+```bash
+# Instale o FVM globalmente
+dart pub global activate fvm
+
+# Verifique a instalação
+fvm --version
+```
+
+#### Instalação via Homebrew (macOS e Linux)
+
+```bash
+brew tap leoafarias/fvm
+brew install fvm
+```
+
+#### Instalação via Chocolatey (Windows)
+
+```bash
+choco install fvm
+```
+
+### Usando o FVM
+
+```bash
+# Liste as versões disponíveis do Flutter
+fvm releases
+
+# Instale uma versão específica do Flutter
+fvm install stable
+fvm install 3.10.0
+
+# Use uma versão específica globalmente
+fvm global stable
+
+# Use uma versão específica para o projeto atual
+fvm use stable
+
+# Execute comandos Flutter com a versão do FVM
+fvm flutter --version
+fvm flutter pub get
+fvm flutter run
+```
+
+### Configurando o PATH do FVM
+
+Após instalar o FVM, adicione o seguinte ao seu PATH:
+
+#### Windows
+```bash
+# Adicione ao PATH do sistema:
+C:\Users\<seu-usuario>\fvm\default\bin
+```
+
+#### macOS/Linux
+```bash
+# Adicione ao ~/.zshrc ou ~/.bash_profile:
+export PATH="$PATH:$HOME/fvm/default/bin"
+source ~/.zshrc
+```
+
+## �📥 Installation
 
 Follow these steps to set up the project locally:
 
